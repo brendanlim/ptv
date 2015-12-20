@@ -8,6 +8,33 @@ var Presenter = {
     }
   },
 
+	makeDocument: function(resource) {
+		if (!Presenter.parser) {
+			Presenter.parser = new DOMParser();
+		}
+		var doc = Presenter.parser.parseFromString(resource, "application/xml");
+		return doc;
+	},
+
+	modalDialogPresenter: function(xml) {
+		navigationDocument.presentModal(xml);
+	},
+
+	menuBarItemPresenter: function(xml, ele) {
+	  var feature = ele.parentNode.getFeature("MenuBarDocument");
+
+	  if (feature) {
+	    var currentDoc = feature.getDocument(ele);
+	    if (!currentDoc) {
+	      feature.setDocument(xml, ele);
+	    }
+	  }
+	},
+
+	pushDocument: function(xml) {
+		navigationDocument.pushDocument(xml);
+	},
+
   showLoadingIndicator: function(presentation) {
     if (!this.loadingIndicator) {
         this.loadingIndicator = this.makeDocument(this.loadingTemplate);
@@ -25,32 +52,6 @@ var Presenter = {
       this.loadingIndicatorVisible = false;
     }
   },
-
-	makeDocument: function(resource) {
-		if (!Presenter.parser) {
-			Presenter.parser = new DOMParser();
-		}
-		var doc = Presenter.parser.parseFromString(resource, "application/xml");
-		return doc;
-	},
-
-	modalDialogPresenter: function(xml) {
-		navigationDocument.presentModal(xml);
-	},
-
-	menuBarItemPresenter: function(xml, ele) {
-	  var feature = ele.parentNode.getFeature("MenuBarDocument");
-	  if (feature) {
-	    var currentDoc = feature.getDocument(ele);
-	    if (!currentDoc) {
-	      feature.setDocument(xml, ele);
-	    }
-	  }
-	},
-
-	pushDocument: function(xml) {
-		navigationDocument.pushDocument(xml);
-	},
 
 	load: function(event) {
   	var self = this,

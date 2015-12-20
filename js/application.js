@@ -9,7 +9,7 @@ App.onLaunch = function(options) {
 	evaluateScripts(javascriptFiles, function(success) {
 		if(success) {
 			resourceLoader = new ResourceLoader(options.BASEURL);
-			resourceLoader.loadResource(`${options.BASEURL}templates/pinoytv.xml.js`, function(resource) {
+			resourceLoader.loadResource(`${options.BASEURL}templates/menu.xml.js`, function(resource) {
 				var doc = Presenter.makeDocument(resource);
 				doc.addEventListener("select", Presenter.load.bind(Presenter));
 				Presenter.pushDocument(doc);
