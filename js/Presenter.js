@@ -11,6 +11,15 @@ var Presenter = {
 		navigationDocument.presentModal(xml);
 	},
 
+	menuBarItemPresenter: function(xml, ele) {
+  var feature = ele.parentNode.getFeature("MenuBarDocument");
+  if (feature) {
+    var currentDoc = feature.getDocument(ele);
+    if (!currentDoc) {
+      feature.setDocument(xml, ele);
+    }
+  },
+
 	pushDocument: function(xml) {
 		navigationDocument.pushDocument(xml);
 	},
@@ -19,7 +28,7 @@ var Presenter = {
   	var self = this,
       	ele = event.target,
       	videoURL = ele.getAttribute("videoURL")
-      	
+
   	if(videoURL) {
 	    var player = new Player();
 	    var playlist = new Playlist();
