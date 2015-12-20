@@ -73,7 +73,7 @@ var Presenter = {
 
 		console.log("2");
   	if (templateURL) {
-  		self.showLoadingIndicator(presentation);
+  		// self.showLoadingIndicator(presentation);
 			console.log("3");
 
       resourceLoader.loadResource(templateURL,
