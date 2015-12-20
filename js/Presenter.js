@@ -54,6 +54,7 @@ var Presenter = {
   },
 
 	load: function(event) {
+		this.console.log("1");
   	var self = this,
       	ele = event.target,
         templateURL = ele.getAttribute("template"),
@@ -70,19 +71,27 @@ var Presenter = {
 	    player.present();
   	}
 
+		this.console.log("2");
   	if (templateURL) {
   		self.showLoadingIndicator(presentation);
+			this.console.log("3");
 
       resourceLoader.loadResource(templateURL,
         function(resource) {
+					this.console.log("4");
+
           if (resource) {
             var doc = self.makeDocument(resource);
             doc.addEventListener("select", self.load.bind(self));
             doc.addEventListener("highlight", self.load.bind(self));
+						this.console.log("5");
 
             if (self[presentation] instanceof Function) {
+								this.console.log("6");
+
                 self[presentation].call(self, doc, ele);
             } else {
+								this.console.log("7");
                 self.defaultPresenter.call(self, doc);
             }
           }
