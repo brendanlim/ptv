@@ -30,7 +30,9 @@ var Presenter = {
 		if (!Presenter.parser) {
 			Presenter.parser = new DOMParser();
 		}
+		alert('hi')
 		var doc = Presenter.parser.parseFromString(resource, "application/xml");
+		alert('wtf')
 		return doc;
 	},
 
