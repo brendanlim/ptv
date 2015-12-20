@@ -54,7 +54,7 @@ var Presenter = {
   },
 
 	load: function(event) {
-		this.console.log("1");
+		console.log("1");
   	var self = this,
       	ele = event.target,
         templateURL = ele.getAttribute("template"),
