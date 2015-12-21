@@ -7,7 +7,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
     }
     @media -tv-template and (-tv-uber) {
       .darkBackgroundColor {
-        background-color: rgb(4, 27, 97);
+        background-color: #17022b;
       }
     }
     </style>
