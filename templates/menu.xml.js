@@ -3,10 +3,10 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
   <menuBarTemplate>
     <menuBar>
       <menuItem template="${this.BASEURL}templates/news.xml.js" presentation="menuBarItemPresenter">
-        <title>News</title>
+        <title>Live TV</title>
       </menuItem>
       <menuItem template="${this.BASEURL}templates/news.xml.js" presentation="menuBarItemPresenter">
-        <title>Music</title>
+        <title>Live Radio</title>
       </menuItem>
       <menuItem template="${this.BASEURL}templates/news.xml.js" presentation="menuBarItemPresenter">
         <title>About</title>

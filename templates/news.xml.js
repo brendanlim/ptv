@@ -1,7 +1,15 @@
 var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
     <catalogTemplate> 
+      <banner> 
+        <title>Live TV</title>
+      </banner>
+      <list> 
         <section> 
+           <listItemLockup> 
+             <title>News</title>
+             <decorationLabel>2</decorationLabel>
+             <relatedContent> 
                <grid>
                  <section>                  
                   <lockup videoURL="http://stream3.news5.ph/aksyon/aksyonplayout/playlist.m3u8">
@@ -14,7 +22,10 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
                   </lockup>
                  </section>
                </grid>
+             </relatedContent>
+           </listItemLockup>
         </section>
+      </list>
     </catalogTemplate>
   </document>`
 }
