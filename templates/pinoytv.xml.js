@@ -7,6 +7,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
     }
     .titleColor {
       color: #FFFFFF;
+      margin-bottom: 10px;
     }
     @media -tv-template and (-tv-uber) {
       .darkBackgroundColor {
@@ -21,6 +22,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
         <img src="${this.BASEURL}images/header.jpg" width="1920" height="360" />
       </background>
       <title class="titleColor">Pinoy Television</title>
+      <description>An always updating collection of Filipino TV and music across the internet. Check often for new TV and music selections.</description>
     </banner>
     <collectionList>
       <shelf>
