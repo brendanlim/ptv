@@ -21,7 +21,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
         <img src="${this.BASEURL}images/header.jpg" width="1920" height="360" />
       </background>
       <title class="titleColor">Pinoy TV</title>
-      <description>An always updating collection of Filipino television and music across the internet. Check back often for new television and music selections.</description>
+      <description>An always updating collection of Filipino television and music across the internet. Check often for new TV and music selections.</description>
     </banner>
     <collectionList>
       <shelf>
