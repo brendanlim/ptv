@@ -14,6 +14,9 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
   </head>
   <stackTemplate class="darkBackgroundColor" theme="dark">
     <banner>
+      <title>
+        Pinoy TV
+      </title>
       <background>
         <img src="${this.BASEURL}images/header.jpg" width="1920" height="360" />
       </background>
