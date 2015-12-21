@@ -1,6 +1,13 @@
 var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
 <document>
-  <menuBarTemplate theme="dark">
+  <head>
+    <style>
+      .darkBackgroundColor {
+        background-color: #140C0A;
+      }
+    </style>
+  </head>
+  <menuBarTemplate theme="dark" class="darkBackgroundColor">
     <menuBar>
       <menuItem template="${this.BASEURL}templates/news.xml.js" presentation="menuBarItemPresenter">
         <title>Live TV</title>
