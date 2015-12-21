@@ -1,7 +1,6 @@
 var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
     <catalogTemplate> 
-      <list> 
         <section> 
                <grid>
                  <section>                  
@@ -16,7 +15,6 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
                  </section>
                </grid>
         </section>
-      </list>
     </catalogTemplate>
   </document>`
 }
