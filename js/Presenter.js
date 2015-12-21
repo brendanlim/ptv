@@ -73,14 +73,13 @@ var Presenter = {
   	}
 
   	if (templateURL) {
-  		// self.showLoadingIndicator(presentation);
+  		self.showLoadingIndicator(presentation);
 
       resourceLoader.loadResource(templateURL,
         function(resource) {
-
           if (resource) {
             var doc = self.makeDocument(resource);
-            
+
             if (self[presentation] instanceof Function) {
                 self[presentation].call(self, doc, ele);
             } else {
@@ -91,4 +90,13 @@ var Presenter = {
       );
     }
 	},
+
+  loadingTemplate: `<?xml version="1.0" encoding="UTF-8" ?>
+  <document>
+    <loadingTemplate>
+      <activityIndicator>
+        <text>Loading...</text>
+      </activityIndicator>
+    </loadingTemplate>
+  </document>`
 }
