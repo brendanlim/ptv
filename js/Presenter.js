@@ -80,9 +80,7 @@ var Presenter = {
 
           if (resource) {
             var doc = self.makeDocument(resource);
-            doc.addEventListener("select", self.load.bind(self));
-            doc.addEventListener("highlight", self.load.bind(self));
-
+            
             if (self[presentation] instanceof Function) {
                 self[presentation].call(self, doc, ele);
             } else {
