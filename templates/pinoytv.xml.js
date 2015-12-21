@@ -26,12 +26,12 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
         </header>
         <section>
           <lockup videoURL="http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8">
-             <img src="${this.BASEURL}images/tv/untv.jpg" width="308" height="308" />
+             <img src="${this.BASEURL}images/tv/untv.pnh" width="308" height="308" />
              <title class="showTextOnHighlight">UNTV</title>
           </lockup>
 
           <lockup videoURL="http://stream3.news5.ph/aksyon/aksyonplayout/playlist.m3u8">
-             <img src="${this.BASEURL}images/tv/aksyon-news-5.jpg" width="308" height="308" />
+             <img src="${this.BASEURL}images/tv/aksyon.png" width="308" height="308" />
              <title class="showTextOnHighlight">Aksyon News 5</title>
           </lockup>
         </section>
@@ -42,12 +42,12 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
         </header>
         <section>
           <lockup videoURL="http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8">
-             <img src="${this.BASEURL}images/tv/untv.jpg" width="308" height="308" />
+             <img src="${this.BASEURL}images/tv/untv.pnh" width="308" height="308" />
              <title class="showTextOnHighlight">UNTV</title>
           </lockup>
 
           <lockup videoURL="http://stream3.news5.ph/aksyon/aksyonplayout/playlist.m3u8">
-             <img src="${this.BASEURL}images/tv/aksyon-news-5.jpg" width="308" height="308" />
+             <img src="${this.BASEURL}images/tv/aksyon.png" width="308" height="308" />
              <title class="showTextOnHighlight">Aksyon News 5</title>
           </lockup>
         </section>
