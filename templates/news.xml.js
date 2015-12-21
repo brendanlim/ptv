@@ -1,6 +1,6 @@
 var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
-     <grid>
+     <grid margin="20">
         <header>
           <title>News</title>
         </header>
