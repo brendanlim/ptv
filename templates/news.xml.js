@@ -4,7 +4,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
       <list> 
         <section> 
            <listItemLockup> 
-             <title></title>
+             <title>&nbsp;</title>
              <relatedContent> 
                <grid>
                  <section>                  
