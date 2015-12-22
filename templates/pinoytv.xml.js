@@ -8,7 +8,7 @@ var Entry = {
 
   audio: function(url, title) { return `
     <lockup audioURL="${url}">
-       <img src="/images/radio.png" width="308" height="308" />
+       <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   }
@@ -54,6 +54,22 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
               "http://stream3.news5.ph/aksyon/aksyonplayout/playlist.m3u8",
               this.BASEURL + "images/tv/aksyon.png", 
               "Aksyon News 5")}
+
+            ${Entry.video(
+              "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
+              this.BASEURL + "images/tv/aksyon.png", 
+              "TV Maria")}
+
+            ${Entry.video(
+              "http://iwantvls-i.akamaihd.net/hls/live/206751/ABSCBN_Low/master.m3u8",
+              this.BASEURL + "images/tv/aksyon.png", 
+              "ABS-CBN")}
+
+            ${Entry.video(
+              "http://churchrus2-lh.akamaihd.net/i/COCTesting_1@57550/master.m3u8",
+              this.BASEURL + "images/tv/aksyon.png", 
+              "INCTV HD")}            
+
           </section>
         </shelf>
         <shelf>
