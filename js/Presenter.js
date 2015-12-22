@@ -69,6 +69,7 @@ var Presenter = {
   },
 
   playAudio: function(audioURL) {
+  	console.log(audioURL)
   	var player = this.createPlayer("audio", audioURL);
     player.present();
   },
