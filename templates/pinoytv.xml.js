@@ -3,14 +3,14 @@
 var Entry = {
   video: function(url, imageURL, title) { return `
     <lockup videoURL="${url}">
-       <img src="${imageURL}" width="308" height="308" />
+       <img src="${imageURL}" width="542" height="305" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   },
 
-  audio: function(url, title) { return `
+  audio: function(url, imageURL, title) { return `
     <lockup audioURL="${url}">
-       <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
+       <img src="#{imageURL}" width="542" height="305" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   }
@@ -102,10 +102,12 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
           <section>
             ${Entry.audio(
               "http://radyosingko.news5.ph:8000/stream",
+              this.BASEURL + "images/radio.png",
               "Radyo 5")}
 
             ${Entry.audio(
               "http://icecast.eradioportal.com:8000/monsterrx.m3u",
+              this.BASEURL + "images/radio.png",
               "93.1 Monster Radio, Manila")}
           </section>
         </shelf>
