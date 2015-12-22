@@ -10,7 +10,7 @@ var Entry = {
 
   audio: function(url, title) { return `
     <lockup audioURL="${url}">
-       <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
+       <img src="${this.BASEURL}"+"images/radio.png" width="308" height="308" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   }
@@ -74,8 +74,8 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
           </header>
           <section>
             ${Entry.audio(
-              "http://icecast.eradioportal.com:8000/easy_rock.m3u",
-              "96.3 Easy Rock, Manila")}
+              "http://radyosingko.news5.ph:8000/stream",
+              "Radyo 5")}
 
             ${Entry.audio(
               "http://icecast.eradioportal.com:8000/monsterrx.m3u",
