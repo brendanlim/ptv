@@ -1,7 +1,7 @@
 var Entry = {
   video: function(url, imageURL, title) { return `
     <lockup videoURL="${url}">
-       <img src="${this.BASEURL + imageURL}" width="308" height="308" />
+       <img src="${imageURL}" width="308" height="308" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   },
@@ -47,12 +47,12 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
           <section>
             ${Entry.video(
               "http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8",
-              "images/tv/untv.png", 
+              this.BASEURL + "images/tv/untv.png", 
               "UNTV")}
 
             ${Entry.video(
               "http://stream3.news5.ph/aksyon/aksyonplayout/playlist.m3u8",
-              "images/tv/untv.png", 
+              this.BASEURL + "images/tv/aksyon.png", 
               "Aksyon News 5")}
           </section>
         </shelf>
