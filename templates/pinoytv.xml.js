@@ -1,15 +1,17 @@
-videoEntry: function(url, imageURL, title) { return `
-  <lockup videoURL="${url}">
-     <img src="${imageURL}" width="308" height="308" />
-     <title class="showTextOnHighlight">${title}</title>
-  </lockup>`
-}
+var Entry = {
+  videoEntry: function(url, imageURL, title) { return `
+    <lockup videoURL="${url}">
+       <img src="${imageURL}" width="308" height="308" />
+       <title class="showTextOnHighlight">${title}</title>
+    </lockup>`
+  },
 
-audioEntry: function(url, title) { return `
-  <lockup audioURL="${url}">
-     <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
-     <title class="showTextOnHighlight">${title}</title>
-  </lockup>`
+  audioEntry: function(url, title) { return `
+    <lockup audioURL="${url}">
+       <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
+       <title class="showTextOnHighlight">${title}</title>
+    </lockup>`
+  }
 }
 
 
@@ -44,10 +46,10 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
           <title>Television</title>
         </header>
         <section>
-          ${videoEntry("http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8",
+          ${Entry.videoEntry("http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8",
             this.BASEURL + "images/tv/untv.png",
             "UNTV")}
-          
+
           <lockup videoURL="http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8">
              <img src="${this.BASEURL}images/tv/untv.png" width="308" height="308" />
              <title class="showTextOnHighlight">UNTV</title>
