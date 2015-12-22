@@ -45,19 +45,19 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
           <title>Radio</title>
         </header>
         <section>
-          <lockup videoURL="http://www.surfmusic.de/m3u/102-7-star-fm-manila,14588.m3u">
+          <lockup audioURL="http://www.surfmusic.de/m3u/102-7-star-fm-manila,14588.m3u">
              <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
              <title class="showTextOnHighlight">102.7 Star FM Manila</title>
           </lockup>
-          <lockup videoURL="http://www.surfmusic.de/m3u/105-1-crossover-fm-manila,5254.m3u">
+          <lockup audioURL="http://www.surfmusic.de/m3u/105-1-crossover-fm-manila,5254.m3u">
              <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
              <title class="showTextOnHighlight">105.1 Crossover FM Manila</title>
           </lockup>
-          <lockup videoURL="http://www.surfmusic.de/m3u/90-7-love-radio-manila,11791.m3u">
+          <lockup audioURL="http://www.surfmusic.de/m3u/90-7-love-radio-manila,11791.m3u">
              <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
              <title class="showTextOnHighlight">90.7 Love Radio Manila</title>
           </lockup>
-          <lockup videoURL="http://www.surfmusic.de/m3u/90-7-love-radio-manila,11791.m3u">
+          <lockup audioURL="http://www.surfmusic.de/m3u/90-7-love-radio-manila,11791.m3u">
              <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
              <title class="showTextOnHighlight">Aksyon Radio Iloilo 720</title>
           </lockup>

@@ -84,10 +84,10 @@ var Presenter = {
       	audioURL = ele.getAttribute("audioURL");
 
   	if(videoURL) {
-  		playVideo(videoURL);
+  		self.playVideo(videoURL);
 
   	} else if (audioURL) {
-  		playAudio(audioURL);
+  		self.playAudio(audioURL);
 
   	} else if (templateURL) {
   		self.showLoadingIndicator(presentation);
