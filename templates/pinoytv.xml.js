@@ -57,17 +57,12 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
 
             ${Entry.video(
               "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
-              this.BASEURL + "images/tv/aksyon.png", 
+              this.BASEURL + "images/tv/tvmaria.png", 
               "TV Maria")}
 
             ${Entry.video(
-              "http://iwantvls-i.akamaihd.net/hls/live/206751/ABSCBN_Low/master.m3u8",
-              this.BASEURL + "images/tv/aksyon.png", 
-              "ABS-CBN")}
-
-            ${Entry.video(
               "http://churchrus2-lh.akamaihd.net/i/COCTesting_1@57550/master.m3u8",
-              this.BASEURL + "images/tv/aksyon.png", 
+              this.BASEURL + "images/tv/inctv.png", 
               "INCTV HD")}            
 
           </section>
