@@ -8,7 +8,7 @@ var Entry = {
 
   audio: function(url, title) { return `
     <lockup audioURL="${url}">
-       <img src="${this.BASEURL}images/radio.png" width="308" height="308" />
+       <img src="/images/radio.png" width="308" height="308" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   }
