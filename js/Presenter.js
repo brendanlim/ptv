@@ -53,6 +53,26 @@ var Presenter = {
     }
   },
 
+  createPlayer: function(type, url) {
+	    var player = new Player();
+	    var playlist = new Playlist();
+	    var mediaItem = new MediaItem(type, url);
+	    
+	    player.playlist = playlist;
+	    player.playlist.push(mediaItem);
+	    return player;
+  },
+
+  playVideo: function(videoURL) {
+  	var player = createPlayer("video", videoURL);
+    player.present();
+  },
+
+  playAudio: function(audioURL) {
+  	var player = createPlayer("audio", audioURL);
+    player.present();
+  },
+
 	load: function(event) {
 		console.log(event);
 
@@ -60,19 +80,16 @@ var Presenter = {
       	ele = event.target,
         templateURL = ele.getAttribute("template"),
         presentation = ele.getAttribute("presentation"),
-      	videoURL = ele.getAttribute("videoURL");
+      	videoURL = ele.getAttribute("videoURL"),
+      	audioURL = ele.getAttribute("audioURL");
 
   	if(videoURL) {
-	    var player = new Player();
-	    var playlist = new Playlist();
-	    var mediaItem = new MediaItem("video", videoURL);
-	    
-	    player.playlist = playlist;
-	    player.playlist.push(mediaItem);
-	    player.present();
-  	}
+  		playVideo(videoURL);
 
-  	if (templateURL) {
+  	} else if (audioURL) {
+  		playAudio(audioURL);
+
+  	} else if (templateURL) {
   		self.showLoadingIndicator(presentation);
 
       resourceLoader.loadResource(templateURL,
