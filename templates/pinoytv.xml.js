@@ -70,29 +70,6 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
               "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
               this.BASEURL + "images/tv/tvmaria.png", 
               "TV Maria")}
-            // News
-            ${Entry.video(
-              "http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8",
-              this.BASEURL + "images/tv/untv.png", 
-              "UNTV")}
-
-            // News
-            ${Entry.video(
-              "http://stream3.news5.ph/aksyon/aksyonplayout/playlist.m3u8",
-              this.BASEURL + "images/tv/aksyon.png", 
-              "Aksyon News 5")}
-
-            // Religious
-            ${Entry.video(
-              "http://churchrus2-lh.akamaihd.net/i/COCTesting_1@57550/master.m3u8",
-              this.BASEURL + "images/tv/inctv.png", 
-              "INCTV HD")}
-
-            // Religious
-            ${Entry.video(
-              "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
-              this.BASEURL + "images/tv/tvmaria.png", 
-              "TV Maria")}
           </section>
         </grid>
         <shelf>
