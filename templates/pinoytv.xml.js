@@ -58,15 +58,10 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
               "Aksyon News 5")}
 
             ${Entry.video(
-              "http://live.streamup.com:1935/app/pinoy-tambayans-channel/playlist.m3u8",
-              this.BASEURL + "images/tv/tvmaria.png", 
-              "GMA 7")}
-
-            ${Entry.video(
               "http://churchrus2-lh.akamaihd.net/i/COCTesting_1@57550/master.m3u8",
               this.BASEURL + "images/tv/inctv.png", 
               "INCTV HD")}
-                          
+
             ${Entry.video(
               "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
               this.BASEURL + "images/tv/tvmaria.png", 
