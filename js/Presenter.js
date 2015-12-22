@@ -64,12 +64,12 @@ var Presenter = {
   },
 
   playVideo: function(videoURL) {
-  	var player = createPlayer("video", videoURL);
+  	var player = self.createPlayer("video", videoURL);
     player.present();
   },
 
   playAudio: function(audioURL) {
-  	var player = createPlayer("audio", audioURL);
+  	var player = self.createPlayer("audio", audioURL);
     player.present();
   },
 
