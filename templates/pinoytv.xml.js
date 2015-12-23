@@ -9,8 +9,8 @@ var Entry = {
   },
 
   audio: function(url, imageURL, title) { return `
-    <lockup audioURL="${url}">
-       <img src="#{imageURL}" width="542" height="305" />
+    <lockup audioURL="${url}" audioTitle="${title}">
+       <img src="${imageURL}" width="308" height="308" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   }
@@ -80,7 +80,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
             ${Entry.audio(
               "http://radyosingko.news5.ph:8000/stream",
               this.BASEURL + "images/radio.png",
-              "Radyo 5")}
+              "Radyo 5, Manila")}
 
             ${Entry.audio(
               "http://icecast.eradioportal.com:8000/monsterrx.m3u",

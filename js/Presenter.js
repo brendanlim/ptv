@@ -53,10 +53,18 @@ var Presenter = {
     }
   },
 
-  createPlayer: function(type, url) {
+  createMediaItem: function(type, url, title) {
+	    var mediaItem = new MediaItem(type, url)
+	    if(title) {
+	    	mediaItem.title = title;
+	    }
+
+	    return mediaItem;
+  }
+
+  createPlayer: function(mediaItem) {
 	    var player = new Player();
 	    var playlist = new Playlist();
-	    var mediaItem = new MediaItem(type, url);
 	    
 	    player.playlist = playlist;
 	    player.playlist.push(mediaItem);
@@ -64,13 +72,14 @@ var Presenter = {
   },
 
   playVideo: function(videoURL) {
-  	var player = this.createPlayer("video", videoURL);
+  	var mediaItem = this.createMediaItem("video", videoURL)
+  	var player = this.createPlayer(mediaItem);
     player.present();
   },
 
-  playAudio: function(audioURL) {
-  	console.log(audioURL)
-  	var player = this.createPlayer("audio", audioURL);
+  playAudio: function(audioURL, audioTitle) {
+  	var mediaItem = this.createMediaItem("audio", audioURL, audioTitle)
+  	var player = this.createPlayer(mediaItem);
     player.present();
   },
 
@@ -82,17 +91,18 @@ var Presenter = {
         templateURL = ele.getAttribute("template"),
         presentation = ele.getAttribute("presentation"),
       	videoURL = ele.getAttribute("videoURL"),
-      	audioURL = ele.getAttribute("audioURL");
+      	audioURL = ele.getAttribute("audioURL"),
+      	audioTitle = ele.getAttribute("audioTitle");
+
+		self.showLoadingIndicator(presentation);
 
   	if(videoURL) {
   		self.playVideo(videoURL);
 
   	} else if (audioURL) {
-  		self.playAudio(audioURL);
+  		self.playAudio(audioURL, audioTitle);
 
   	} else if (templateURL) {
-  		self.showLoadingIndicator(presentation);
-
       resourceLoader.loadResource(templateURL,
         function(resource) {
           if (resource) {
