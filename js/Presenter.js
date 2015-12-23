@@ -60,7 +60,7 @@ var Presenter = {
 	    }
 
 	    return mediaItem;
-  }
+  },
 
   createPlayer: function(mediaItem) {
 	    var player = new Player();
