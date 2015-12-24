@@ -61,28 +61,33 @@ var Presenter = {
 	    return mediaItem;
   },
 
-  createPlayer: function(mediaItem) {
+  createPlayer: function(mediaItem, title) {
 	    var player = new Player();
 	    var playlist = new Playlist();
 	    
 	    player.playlist = playlist;
 	    player.playlist.push(mediaItem);
+
+    	player.addEventListener("stateDidChange", function(ev) {
+  	    GoogleAnalytics.event(title, ev.state);
+	    }, false);  
+
 	    return player;
   },
 
   playVideo: function(videoURL, title) {
-  	GoogleAnalytics.event(title, "playVideo"); 
+  	GoogleAnalytics.event(title, "selected"); 
 
   	var mediaItem = this.createMediaItem("video", videoURL)
-  	var player = this.createPlayer(mediaItem);
+  	var player = this.createPlayer(mediaItem, title);
     player.present();
   },
 
   playAudio: function(audioURL, title) {
-  	GoogleAnalytics.event(title, "playAudio"); 
+  	GoogleAnalytics.event(title, "selected"); 
 
   	var mediaItem = this.createMediaItem("audio", audioURL, title)
-  	var player = this.createPlayer(mediaItem);
+  	var player = this.createPlayer(mediaItem, title);
     player.present();
   },
 
