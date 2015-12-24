@@ -70,18 +70,14 @@ var Presenter = {
 	    return player;
   },
 
-  addPlaybackListener: function(player, title, url) {
-  	player.addEventListener("stateDidChange", function(ev) {
-	    GoogleAnalytics.event(title, "playerStateChange", ev.state, url);
-    }, false);  
-  },
-
   playMedia: function(type, url, title) {
   	GoogleAnalytics.event(title, "selected", url);
 
   	var mediaItem = this.createMediaItem(type, url)
   	var player = this.createPlayer(mediaItem, title);
-  	this.addPlaybackListener(player, title, url);
+  	player.addEventListener("stateDidChange", function(ev) {
+	    GoogleAnalytics.event(title, "playerStateChange", ev.state, url);
+    }, false);  
 
     player.present();
   },
