@@ -29,7 +29,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
       }
       @media -tv-template and (-tv-uber) {
         .darkBackgroundColor {
-          background-color: #31114E;
+          background-color: #240A3A;
         }
       }
       </style>
