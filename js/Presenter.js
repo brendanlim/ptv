@@ -75,7 +75,9 @@ var Presenter = {
 
   	var mediaItem = this.createMediaItem(type, url)
   	var player = this.createPlayer(mediaItem, title);
+  	
   	player.addEventListener("stateDidChange", function(ev) {
+  		console.log("logging event with title: " + title + " " + ev.state);
 	    GoogleAnalytics.event(title, "playerStateChange", ev.state, url);
     }, false);  
 
