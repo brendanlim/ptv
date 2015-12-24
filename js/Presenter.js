@@ -99,7 +99,7 @@ var Presenter = {
   		self.playMedia("video", videoURL, title);
 
   	} else if (audioURL) {
-  		self.playAudio("audio", audioURL, title);
+  		self.playMedia("audio", audioURL, title);
 
   	} else if (templateURL) {
 
