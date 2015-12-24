@@ -64,32 +64,28 @@ var Presenter = {
   createPlayer: function(mediaItem, title) {
 	    var player = new Player();
 	    var playlist = new Playlist();
-	    
 	    player.playlist = playlist;
 	    player.playlist.push(mediaItem);
-
-    	player.addEventListener("stateDidChange", function(ev) {
-  	    GoogleAnalytics.event(title, "playerStateChange", ev.state);
-	    }, false);  
 
 	    return player;
   },
 
-  playVideo: function(videoURL, title) {
-  	GoogleAnalytics.event(title, "selected");
+  addPlaybackListener: function(player, title, url) {
+  	player.addEventListener("stateDidChange", function(ev) {
+	    GoogleAnalytics.event(title, "playerStateChange", ev.state, url);
+    }, false);  
+  },
 
-  	var mediaItem = this.createMediaItem("video", videoURL)
+  playMedia: function(type, url, title) {
+  	GoogleAnalytics.event(title, "selected", url);
+
+  	var mediaItem = this.createMediaItem(type, url)
   	var player = this.createPlayer(mediaItem, title);
+  	this.addPlaybackListener(player, title, url);
+
     player.present();
   },
 
-  playAudio: function(audioURL, title) {
-  	GoogleAnalytics.event(title, "selected");
-
-  	var mediaItem = this.createMediaItem("audio", audioURL, title)
-  	var player = this.createPlayer(mediaItem, title);
-    player.present();
-  },
 
 	load: function(event) {
 		console.log(event);
@@ -103,10 +99,10 @@ var Presenter = {
       	title = ele.getAttribute("title");
 
   	if(videoURL) {
-  		self.playVideo(videoURL, title);
+  		self.playMedia("video", videoURL, title);
 
   	} else if (audioURL) {
-  		self.playAudio(audioURL, title);
+  		self.playAudio("audio", audioURL, title);
 
   	} else if (templateURL) {
 
