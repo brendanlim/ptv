@@ -17,7 +17,7 @@ var Entry = {
 };
 
 var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
-  <document onload="GoogleAnalytics.screenview(\"Listing\");">
+  <document onload='GoogleAnalytics.screenview("Listing");'>
     <head>
       <style>
       .showTextOnHighlight {
