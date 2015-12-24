@@ -39,7 +39,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
         <background>
           <img src="${this.BASEURL}images/header.png" width="1920" height="360" />
         </background>
-        <description>An always updating collection of Filipino TV and radio</description>
+        <description>Watch and listen to live Filipino television and radio</description>
       </banner>
       <collectionList>
         <grid>
