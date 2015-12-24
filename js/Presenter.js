@@ -22,7 +22,6 @@ var Presenter = {
 
 	menuBarItemPresenter: function(xml, ele) {
 	  var feature = ele.parentNode.getFeature("MenuBarDocument");
-
 	  if (feature) {
 	    var currentDoc = feature.getDocument(ele);
 	    if (!currentDoc) {
@@ -71,14 +70,18 @@ var Presenter = {
 	    return player;
   },
 
-  playVideo: function(videoURL) {
+  playVideo: function(videoURL, title) {
+  	GoogleAnalytics.event(title, "playVideo"); 
+
   	var mediaItem = this.createMediaItem("video", videoURL)
   	var player = this.createPlayer(mediaItem);
     player.present();
   },
 
-  playAudio: function(audioURL, audioTitle) {
-  	var mediaItem = this.createMediaItem("audio", audioURL, audioTitle)
+  playAudio: function(audioURL, title) {
+  	GoogleAnalytics.event(title, "playAudio"); 
+
+  	var mediaItem = this.createMediaItem("audio", audioURL, title)
   	var player = this.createPlayer(mediaItem);
     player.present();
   },
@@ -92,15 +95,15 @@ var Presenter = {
         presentation = ele.getAttribute("presentation"),
       	videoURL = ele.getAttribute("videoURL"),
       	audioURL = ele.getAttribute("audioURL"),
-      	audioTitle = ele.getAttribute("audioTitle");
+      	title = ele.getAttribute("title");
 
 		self.showLoadingIndicator(presentation);
 
   	if(videoURL) {
-  		self.playVideo(videoURL);
+  		self.playVideo(videoURL, title);
 
   	} else if (audioURL) {
-  		self.playAudio(audioURL, audioTitle);
+  		self.playAudio(audioURL, title);
 
   	} else if (templateURL) {
       resourceLoader.loadResource(templateURL,

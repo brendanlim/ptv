@@ -2,14 +2,14 @@
 
 var Entry = {
   video: function(url, imageURL, title) { return `
-    <lockup videoURL="${url}">
+    <lockup videoURL="${url}" title="${title}">
        <img src="${imageURL}" width="542" height="305" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
   },
 
   audio: function(url, imageURL, title) { return `
-    <lockup audioURL="${url}" audioTitle="${title}">
+    <lockup audioURL="${url}" title="${title}">
        <img src="${imageURL}" width="308" height="308" />
        <title class="showTextOnHighlight">${title}</title>
     </lockup>`
@@ -17,7 +17,7 @@ var Entry = {
 };
 
 var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
-  <document onload="mixpanel.track(\"home\");">
+  <document onload="GoogleAnalytics.screenview(\"Listing\");">
     <head>
       <style>
       .showTextOnHighlight {
