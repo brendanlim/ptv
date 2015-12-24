@@ -69,14 +69,14 @@ var Presenter = {
 	    player.playlist.push(mediaItem);
 
     	player.addEventListener("stateDidChange", function(ev) {
-  	    GoogleAnalytics.event(title, ev.state);
+  	    GoogleAnalytics.event(title, "playerStateChange", ev.state);
 	    }, false);  
 
 	    return player;
   },
 
   playVideo: function(videoURL, title) {
-  	GoogleAnalytics.event(title, "selected"); 
+  	GoogleAnalytics.event(title, "selected");
 
   	var mediaItem = this.createMediaItem("video", videoURL)
   	var player = this.createPlayer(mediaItem, title);
@@ -84,7 +84,7 @@ var Presenter = {
   },
 
   playAudio: function(audioURL, title) {
-  	GoogleAnalytics.event(title, "selected"); 
+  	GoogleAnalytics.event(title, "selected");
 
   	var mediaItem = this.createMediaItem("audio", audioURL, title)
   	var player = this.createPlayer(mediaItem, title);
