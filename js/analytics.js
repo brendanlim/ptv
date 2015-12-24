@@ -88,7 +88,7 @@
     // Alternatively, you can print out the payloads and enter them in the Hit Builder site
     // to see if they are valid:
     // https://ga-dev-tools.appspot.com/hit-builder/
-    var debug=true
+    var debug=false
     
     function post(payload) {
         var xhr = new XMLHttpRequest()
