@@ -70,22 +70,16 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
               "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
               this.BASEURL + "images/tv/tvmaria.png", 
               "TV Maria")}
+
+            // GMA
+            ${Entry.video(
+              "http://iphone-streaming.ustream.tv/ustreamVideo/21475190/streams/live/playlist.m3u8",
+              this.BASEURL + "images/tv/tvmaria.png", 
+              "GMA 7")}
+
+            
           </section>
         </grid>
-
-        
-        <shelf>
-          <header>
-            <title>GMA Shows</title>
-          </header>
-          <section>
-            ${Entry.video(
-              "http://www.youtube.com/embed?listType=playlist&list=PLGRhcC_vtOrYi48wDzrUe8aeiKUs6J4Db",
-              this.BASEURL + "images/tv/aksyon.png", 
-              "Buena Familia")}
-          </section>
-        </shelf>
-
 
         <shelf>
           <header>
