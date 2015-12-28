@@ -80,7 +80,7 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
           </header>
           <section>
             ${Entry.video(
-              "https://www.youtube.com/playlist?list=PLGRhcC_vtOrYHy0m0kg4yhFcpdfOpJkwP",
+              "http://www.youtube.com/embed?listType=playlist&list=PLGRhcC_vtOrYi48wDzrUe8aeiKUs6J4Db",
               this.BASEURL + "images/tv/aksyon.png", 
               "Buena Familia")}
           </section>
