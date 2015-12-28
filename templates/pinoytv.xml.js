@@ -72,6 +72,21 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
               "TV Maria")}
           </section>
         </grid>
+
+        
+        <shelf>
+          <header>
+            <title>GMA Shows</title>
+          </header>
+          <section>
+            ${Entry.video(
+              "https://www.youtube.com/playlist?list=PLGRhcC_vtOrYHy0m0kg4yhFcpdfOpJkwP",
+              this.BASEURL + "images/tv/aksyon.png", 
+              "Buena Familia")}
+          </section>
+        </shelf>
+
+
         <shelf>
           <header>
             <title>Radio</title>
