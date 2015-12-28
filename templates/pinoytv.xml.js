@@ -47,6 +47,12 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
             <title>Television</title>
           </header>
           <section>
+            // GMA
+            ${Entry.video(
+              "http://iphone-streaming.ustream.tv/ustreamVideo/21475190/streams/live/playlist.m3u8",
+              this.BASEURL + "images/tv/gma.png", 
+              "GMA 7")}
+
             // News
             ${Entry.video(
               "http://livestream01.untvweb.com:1935/public/untvwebstream/playlist.m3u8",
@@ -70,13 +76,6 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
               "http://iphone-streaming.ustream.tv/ustreamVideo/10646391/streams/live/playlist.m3u8",
               this.BASEURL + "images/tv/tvmaria.png", 
               "TV Maria")}
-
-            // GMA
-            ${Entry.video(
-              "http://iphone-streaming.ustream.tv/ustreamVideo/21475190/streams/live/playlist.m3u8",
-              this.BASEURL + "images/tv/tvmaria.png", 
-              "GMA 7")}
-
             
           </section>
         </grid>
