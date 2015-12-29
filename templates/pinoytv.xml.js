@@ -81,18 +81,6 @@ var Template = function() { return `<?xml version="1.0" encoding="UTF-8" ?>
 
         <shelf>
           <header>
-            <title>Television Shows</title>
-          </header>
-          <section>
-            ${Entry.video(
-              "http://www.dailymotion.com/cdn/manifest/video/x3j8oy1.m3u8?auth=1451507706-2562-f2dmvybh-6d85d75c990c5a57a8fa57ba94bf0c29",
-              this.BASEURL + "images/tv/tvmaria.png",
-              "Eat Bulaga")}
-          </section>
-        </shelf>
-
-        <shelf>
-          <header>
             <title>Radio</title>
           </header>
           <section>
